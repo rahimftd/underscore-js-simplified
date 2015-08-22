@@ -1,0 +1,1 @@
+This repository contains simplified versions of the underscore.js functions
