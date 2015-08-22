@@ -13,7 +13,7 @@ function map(arr, iteratee) {
 	return newArr;
 }
 
-//Reduce function
+//Reduce
 function reduce(arr, reduceFunc, memo) {
 	if (arr.length > 0 && memo !== undefined) {
 		return reduce(arr.slice(1), reduceFunc, reduceFunc(memo, arr[0]))
@@ -23,3 +23,34 @@ function reduce(arr, reduceFunc, memo) {
 		return memo;
 	}
 }
+
+//Placeholder: reduceRight
+
+//Find
+
+function find(arr, predicate) {
+	for (var i = 0; i < arr.length; i++) {
+		if(predicate(arr[i])) {
+			return arr[i];
+		}
+	}
+	return undefined;
+}
+
+//Filter
+
+function filter(arr, predicate) {
+	var filterArr = [];
+
+	for (var i = 0; i < arr.length; i++) {
+		if(predicate(arr[i])) {
+			filterArr.push(arr[i]);
+		}
+	}
+	
+	return filterArr;
+}
+
+
+
+
