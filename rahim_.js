@@ -1,8 +1,14 @@
 //Transforms an array based on the "iteratee" function provided
 
-function map(numArr, iteratee) {
-	for (var i = 0; i < numArr.length; i++) {
-		numArr[i] = iteratee(numArr[i]);
+function each(Arr, iteratee) {
+	for (var i = 0; i < Arr.length; i++) {
+		Arr[i] = iteratee(numArr[i]);
 	}
-	return numArr;
+}
+
+//Similar to each, but creates a new array
+function map(Arr, iteratee) {
+	var newArr = Arr.slice(0);
+	each(newArr, iteratee);
+	return newArr;
 }
