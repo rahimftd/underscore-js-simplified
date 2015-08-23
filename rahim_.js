@@ -7,6 +7,7 @@ function each(arr, iteratee) {
 }
 
 //Similar to each, but creates a new array
+
 function map(arr, iteratee) {
 	var newArr = arr.slice(0);
 	each(newArr, iteratee);
@@ -14,6 +15,7 @@ function map(arr, iteratee) {
 }
 
 //Reduce
+
 function reduce(arr, reduceFunc, memo) {
 	if (arr.length > 0 && memo !== undefined) {
 		return reduce(arr.slice(1), reduceFunc, reduceFunc(memo, arr[0]))
