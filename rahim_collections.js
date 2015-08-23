@@ -75,5 +75,18 @@ function findWhere (arr, properties) {
 	return where(arr, properties)[0];
 }
 
+//Reject
+
+function reject(arr, predicate) {
+	var filterArr = [];
+
+	for (var i = 0; i < arr.length; i++) {
+		if(!predicate(arr[i])) {
+			filterArr.push(arr[i]);
+		}
+	}
+	
+	return filterArr;
+}
 
 
