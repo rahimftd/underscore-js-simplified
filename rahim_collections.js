@@ -89,7 +89,18 @@ function reject(arr, predicate) {
 	return filterArr;
 }
 
-//Some
+//Every - returns true if ALL the values in the list pass the test
+
+function every(arr, predicate) {
+	for (var i = 0; i < arr.length; i++) {
+		if(!predicate(arr[i])) {
+			return false;
+		}
+	}
+	return true;
+}
+
+//Some - returns true if some value in the list passes the predicate test
 function some(arr, predicate) {
 
 	for (var i = 0; i < arr.length; i++) {
