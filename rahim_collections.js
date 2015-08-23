@@ -89,7 +89,7 @@ function reject(arr, predicate) {
 	return filterArr;
 }
 
-//Every - returns true if ALL the values in the list pass the test
+//Every - returns true if ALL the values in the array pass the test
 
 function every(arr, predicate) {
 	for (var i = 0; i < arr.length; i++) {
@@ -100,7 +100,7 @@ function every(arr, predicate) {
 	return true;
 }
 
-//Some - returns true if some value in the list passes the predicate test
+//Some - returns true if some value in the array passes the predicate test
 function some(arr, predicate) {
 
 	for (var i = 0; i < arr.length; i++) {
@@ -109,6 +109,18 @@ function some(arr, predicate) {
 		}
 	}
 	return false;
+}
+
+//contains - returns true if the array contains the given value
+
+function contains(arr, value) {
+	if (arr[0] === value) {
+		return true;
+	} else if(arr.length > 1) {
+		return contains(arr.slice(1), value);
+	} else {
+		return false;
+	}
 }
 
 
