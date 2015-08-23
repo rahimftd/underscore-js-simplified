@@ -51,6 +51,24 @@ function filter(arr, predicate) {
 	return filterArr;
 }
 
+//Where- return all values that match the key value pairs in properties
+
+function where (arr, properties) {
+	
+	var subArr = arr;
+
+	for (var i = 0; i < subArr.length; i++) {
+		for (var key in properties) {
+			if(subArr[i][key] != properties[key]){
+				subArr.splice(i,1);
+				i--;
+				break;
+			}
+		}
+	}
+	return subArr;
+}
+
 
 
 
