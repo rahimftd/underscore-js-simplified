@@ -69,6 +69,11 @@ function where (arr, properties) {
 	return subArr;
 }
 
+//findWhere- returns first elements that matches all key value pairs
+
+function findWhere (arr, properties) {
+	return where(arr, properties)[0];
+}
 
 
 
